@@ -1,0 +1,13 @@
+import code as x 
+x.create("name",25)
+x.create("src",70,4000) 
+x.read("name")
+x.read("src")
+x.create("name",50)
+x.delete("name")
+t1=Thread(target=(create or read or delete),args=(key_name,value,timeout)) 
+t1.start()
+t1.sleep()
+t2=Thread(target=(create or read or delete),args=(key_name,value,timeout)) 
+t2.start()
+t2.sleep()
